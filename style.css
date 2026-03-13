@@ -1,13 +1,13 @@
 :root {
-  --bg: #07090e;
-  --bg-soft: #101523;
+  --bg: #040407;
+  --bg-soft: #040407;
   --ink: #f2efe7;
   --muted: #c5c0b5;
   --accent: #e8a860;
   --accent-deep: #a8633d;
-  --card: rgba(16, 21, 35, 0.72);
+  --card: rgba(12, 12, 16, 0.82);
   --line: rgba(242, 239, 231, 0.17);
-  --glass: rgba(12, 16, 26, 0.6);
+  --glass: rgba(10, 10, 14, 0.72);
 }
 
 * {
@@ -24,10 +24,7 @@ body {
 body {
   font-family: "Manrope", sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 20% 20%, rgba(232, 168, 96, 0.23), transparent 38%),
-    radial-gradient(circle at 78% 11%, rgba(103, 83, 204, 0.25), transparent 35%),
-    linear-gradient(165deg, var(--bg), var(--bg-soft));
+  background: var(--bg);
   line-height: 1.65;
   overflow-x: hidden;
 }
@@ -37,7 +34,7 @@ body {
   z-index: -1;
   border-radius: 50%;
   filter: blur(28px);
-  opacity: 0.45;
+  opacity: 0;
 }
 
 .ambient-shape-left {
@@ -72,7 +69,7 @@ body {
   position: sticky;
   top: 0;
   backdrop-filter: blur(9px);
-  background: rgba(7, 9, 14, 0.62);
+  background: rgba(4, 4, 7, 0.88);
   border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
@@ -188,18 +185,21 @@ h1 {
   border: none;
   border-radius: 0;
   box-shadow: none;
-  /* Seamless blend: fade edges into the dark background */
+  background: var(--bg);
+  /* Fade all edges into the exact page background color */
   -webkit-mask-image: radial-gradient(
-    ellipse 80% 92% at 50% 35%,
-    black 38%,
-    rgba(0, 0, 0, 0.55) 62%,
-    transparent 82%
+    ellipse 74% 88% at 50% 34%,
+    black 44%,
+    rgba(0, 0, 0, 0.88) 62%,
+    rgba(0, 0, 0, 0.38) 74%,
+    transparent 84%
   );
   mask-image: radial-gradient(
-    ellipse 80% 92% at 50% 35%,
-    black 38%,
-    rgba(0, 0, 0, 0.55) 62%,
-    transparent 82%
+    ellipse 74% 88% at 50% 34%,
+    black 44%,
+    rgba(0, 0, 0, 0.88) 62%,
+    rgba(0, 0, 0, 0.38) 74%,
+    transparent 84%
   );
 }
 
